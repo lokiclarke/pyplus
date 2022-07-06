@@ -10,7 +10,7 @@ setup(
     author_email='lokiclarke09@gmail.com',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    url='',
+    url='https://github.com/lokiclarke/pyplus',
     keywords=['batch','plus','extra']
     install_requires=['pyfiglet',]
 )
