@@ -11,6 +11,6 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     url='https://github.com/lokiclarke/pyplus',
-    keywords=['batch','plus','extra']
+    keywords=['batch','plus','extra'],
     install_requires=['pyfiglet',]
 )
