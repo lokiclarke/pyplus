@@ -38,7 +38,7 @@ class Ascii:
 
 inf = lambda: 999999999999999999999999999999999999**999999999999999999999999999999999999**999999999999999999999999999999999**99999999999999999**9999999999999 
 
-def pause(pause_length=2):
+def pause(pause_length):
     if pause_length == "tiny":
         time.sleep(0.5)
     elif pause_length == "short":
