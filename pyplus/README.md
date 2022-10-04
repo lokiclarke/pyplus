@@ -39,6 +39,9 @@ pypremium.echooff()
 
 # emulates the 'pause' command in batch and adds '>nul'
 pypremium.batpause(nul=True)
+
+# clears the screen, but stores variables in local memory
+pypremium.clear()
 ```
 
 ## Contributing
