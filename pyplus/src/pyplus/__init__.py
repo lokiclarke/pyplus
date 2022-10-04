@@ -32,7 +32,7 @@ class Ascii:
     def __init__(self,msg:str):
         self.msg = msg
 
-    def print(self):
+    def __str__(self):
         print(pyfiglet.figlet_format(self.msg))
 
 
@@ -60,7 +60,8 @@ def clear():
 def batpause():
     system("pause")
 
-def marker(name:str):
+def marker(batch_code:str,name:str):
+    system(msg)
     system(":"+name)
 
 def goto(marker:str):
@@ -90,7 +91,7 @@ def color(color):
 7 = silver F = white.""")
 
 def echooff():
-    system("@echo off")
+    system("@echo off >nul")
 
 def echo(msg:str):
     system("echo "+msg)
