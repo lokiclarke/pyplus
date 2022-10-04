@@ -32,13 +32,13 @@ class Ascii:
     def __init__(self,msg:str):
         self.msg = msg
 
-    def __str__(self):
+    def print(self):
         print(pyfiglet.figlet_format(self.msg))
 
 
-inf = lambda: 999999999999999999999999999999999999**999999999999999999999999999999999999**999999999999999999999999999999999**99999999999999999**9999999999999 
+INFINITY = 999999999999999999999999999999999999**999999999999999999999999999999999999**999999999999999999999999999999999**99999999999999999**9999999999999**9999999**99999999
 
-def pause(pause_length):
+def pause(pause_length=2):
     if pause_length == "tiny":
         time.sleep(0.5)
     elif pause_length == "short":
@@ -57,11 +57,14 @@ def bat_cmd(cmd:str):
 def clear():
     system("cls")
 
-def batpause():
-    system("pause")
+def batpause(nul:bool):
+    if nul == True:
+        system("pause >nul")
+    else:
+        system("pause")
 
-def marker(batch_code:str,name:str):
-    system(msg)
+def marker(msg:str,name:str):
+    system("echo "+msg)
     system(":"+name)
 
 def goto(marker:str):
@@ -76,29 +79,83 @@ def ping(host:str,nul:bool):
     else:
         system("ping -n 1 "+host)
 
-def color(color):
+def color(text:str,bg:str):
+    if text == "black":
+        text = "0"
+    elif text == "navy":
+        text = "1"
+    elif text == "green":
+        text = "2"
+    elif text == "teal":
+        text = "3"
+    elif text == "maroon":
+        text = "4"
+    elif text == "purple":
+        text = "5"
+    elif text == "olive":
+        text = "6"
+    elif text == "silver":
+        text = "7"
+    elif text == "gray":
+        text = "8"
+    elif text == "grey":
+        text = "8"
+    elif text == "blue":
+        text = "9"
+    elif text == "lime":
+        text = "a"
+    elif text == "aqua":
+        text = "b"
+    elif text == "red":
+        text = "c"
+    elif text == "fuchisa":
+        text = "d"
+    elif text == "yellow":
+        text = "e"
+    elif text == "white":
+        text = "f"
+    elif bg == "black":
+        bg = "0"
+    elif bg == "navy":
+        bg = "1"
+    elif bg == "green":
+        bg = "2"
+    elif bg == "teal":
+        bg = "3"
+    elif bg == "maroon":
+        bg = "4"
+    elif bg == "purple":
+        bg = "5"
+    elif bg == "olive":
+        bg = "6"
+    elif bg == "silver":
+        bg = "7"
+    elif bg == "gray":
+        bg = "8"
+    elif bg == "grey":
+        bg = "8"
+    elif bg == "blue":
+        bg = "9"
+    elif bg == "lime":
+        bg = "a"
+    elif bg == "aqua":
+        bg = "b"
+    elif bg == "red":
+        bg = "c"
+    elif bg == "fuchisa":
+        bg = "d"
+    elif bg == "yellow":
+        bg = "e"
+    elif bg == "white":
+        bg = "f"
     try:
-        system("color "+color)
-    except:
-        print("Color not found. Try one of the following:")
-        print("""0 = black 8 = gray.
-1 = navy 9 = blue.
-2 = green A = lime.
-3 = teal B = aqua.
-4 = maroon C = red.
-5 = purple D = fuchsia.
-6 = olive E = yellow.
-7 = silver F = white.""")
+        system("color "+text+bg)
+    except SystemError:
+        print("That color is not supported.")
+        
 
 def echooff():
-    system("@echo off >nul")
+    system("@echo off")
 
 def echo(msg:str):
     system("echo "+msg)
-
-
-
-
-
-
-        
