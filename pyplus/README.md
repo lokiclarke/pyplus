@@ -1,6 +1,6 @@
-# Foobar
+# PyPremium
 
-Foobar is a Python library for dealing with word pluralization.
+PyPremium is a Python library that pushes the boundaries of accessibility for python by emulating batch commands.
 
 ## Installation
 
